@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Caixa</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <script src="assets/js/comum.js" defer></script>
+    <script src="assets/js/dashboard.js" defer></script>
+</head>
+<body>
+
+    <div id="appLayout">
+
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <span class="sidebar-logo">💰</span>
+                    <span class="sidebar-title">Caixa</span>
+                </div>
+                <div class="sidebar-usuario">
+                    <span class="usuario-icon">👤</span>
+                    <span class="usuario-nome" id="nomeUsuario"></span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-pagina="inicio">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-label">Página Inicial</span>
+                </a>
+                <a href="#" class="nav-item" data-pagina="fechamento">
+                    <span class="nav-icon">🏦</span>
+                    <span class="nav-label">Fechamento de Caixa</span>
+                </a>
+                <a href="#" class="nav-item" data-pagina="cheques">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Controle de Cheque</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button type="button" id="btnSair" class="btn-logout">
+                    <span class="nav-label">Sair</span>
+                </button>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="topbar">
+                <button type="button" id="toggleSidebar" class="toggle-btn" title="Recolher menu">☰</button>
+                <span class="topbar-title" id="pageTitle"></span>
+            </header>
+
+            <main class="page-content">
+                <iframe id="pageFrame" class="page-frame" title="Conteúdo da página"></iframe>
+            </main>
+        </div>
+
+    </div>
+
+</body>
+</html>

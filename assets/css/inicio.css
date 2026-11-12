@@ -1,0 +1,131 @@
+body {
+    padding: 28px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* ---------- Cards de saldo ---------- */
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.card {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-blue  { background: var(--cor-primaria); color: #fff; }
+.card-green { background: var(--cor-sucesso);  color: #fff; }
+.card-gray  { background: var(--cor-superficie); color: var(--cor-primaria); border: 1px solid var(--cor-borda); }
+
+.card-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.card-value {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card-value--sm {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ---------- Cheques pendentes ---------- */
+
+.cheques-section h2 {
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--cor-borda);
+    font-size: 15px;
+}
+
+/* Vermelho = em atraso, laranja = vence hoje */
+.cheque-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 14px 18px;
+    background: var(--cor-superficie);
+    border-left: 4px solid var(--cor-perigo);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra-leve);
+}
+
+.cheque-card.hoje {
+    border-left-color: var(--cor-alerta);
+}
+
+.cheque-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.cheque-emitente {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.cheque-detalhe {
+    font-size: 12px;
+    color: var(--cor-texto-suave);
+}
+
+.cheque-lateral {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cheque-valor {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor-perigo);
+}
+
+.cheque-card.hoje .cheque-valor {
+    color: var(--cor-alerta);
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge-atraso { background: #ffebee; color: #c62828; }
+.badge-hoje   { background: #fff8e1; color: #f57f17; }
+
+.empty-msg {
+    padding: 24px;
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}

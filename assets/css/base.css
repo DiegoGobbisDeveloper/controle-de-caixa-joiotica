@@ -1,0 +1,55 @@
+/* Reset, paleta de cores e tipografia usados por todas as páginas */
+
+:root {
+    --cor-primaria:        #1e2a38;
+    --cor-primaria-clara:  #2c3e50;
+    --cor-sucesso:         #27ae60;
+    --cor-sucesso-escura:  #219150;
+    --cor-info:            #2980b9;
+    --cor-info-escura:     #1f6391;
+    --cor-perigo:          #e74c3c;
+    --cor-perigo-escura:   #c0392b;
+    --cor-alerta:          #f39c12;
+    --cor-neutra:          #7f8c8d;
+
+    --cor-fundo:           #f0f2f5;
+    --cor-superficie:      #fff;
+    --cor-borda:           #e0e0e0;
+    --cor-texto:           #333;
+    --cor-texto-suave:     #777;
+
+    --sombra-leve: 0 1px 4px rgba(0, 0, 0, 0.06);
+    --raio:        8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Garante que o atributo hidden sempre esconda, mesmo com display definido em outra regra */
+[hidden] {
+    display: none !important;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3, h4 {
+    color: var(--cor-primaria);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

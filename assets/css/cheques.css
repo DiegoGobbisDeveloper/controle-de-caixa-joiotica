@@ -1,0 +1,153 @@
+body {
+    padding: 24px;
+    color: #222;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    margin: 24px 0 10px;
+    font-size: 16px;
+}
+
+/* ---------- Tabelas ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--cor-superficie);
+    border-radius: var(--raio);
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border: 1px solid var(--cor-borda);
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: var(--cor-primaria);
+    color: #fff;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* ---------- Botões ---------- */
+
+.btn-pdf,
+.btn-cadastrar,
+.btn-cancelar,
+.btn-editar,
+.btn-deletar,
+.btn-depositar {
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.btn-pdf {
+    padding: 10px 20px;
+    background: var(--cor-info);
+    font-size: 13px;
+}
+
+.btn-pdf:hover { background: var(--cor-info-escura); }
+
+.form-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.btn-cadastrar,
+.btn-cancelar {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+.btn-cadastrar         { background: var(--cor-sucesso); }
+.btn-cadastrar:hover   { background: var(--cor-sucesso-escura); }
+.btn-cancelar          { background: var(--cor-neutra); }
+.btn-cancelar:hover    { background: #636e72; }
+
+.btn-editar,
+.btn-deletar,
+.btn-depositar {
+    padding: 5px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.btn-editar          { background: var(--cor-info); }
+.btn-editar:hover    { background: var(--cor-info-escura); }
+.btn-deletar         { background: var(--cor-perigo); }
+.btn-deletar:hover   { background: var(--cor-perigo-escura); }
+.btn-depositar       { background: var(--cor-neutra); }
+.btn-depositar:hover { background: #636e72; }
+
+.btn-depositar.btn-depositado       { background: var(--cor-sucesso); }
+.btn-depositar.btn-depositado:hover { background: var(--cor-sucesso-escura); }
+
+.td-depositado {
+    text-align: center;
+}
+
+.td-acoes {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ---------- Estados da linha ---------- */
+
+/* Cheque depositado fica apagado e riscado, mas os botões continuam legíveis */
+tr.linha-depositada td {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+tr.linha-depositada .td-depositado,
+tr.linha-depositada .td-acoes {
+    opacity: 1;
+    text-decoration: none;
+}
+
+tr.linha-editando td {
+    background: #fff8e1;
+}
+
+/* ---------- Total ---------- */
+
+.total-pendente {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}

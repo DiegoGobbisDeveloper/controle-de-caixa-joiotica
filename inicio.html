@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+    <script src="assets/js/comum.js" defer></script>
+    <script src="assets/js/inicio.js" defer></script>
+</head>
+<body>
+
+    <h1>Visão Geral</h1>
+
+    <section class="card-group">
+        <div class="card card-blue">
+            <span class="card-label">Último Total Saídas (Fora)</span>
+            <span class="card-value" id="homePrevFora">R$ 0,00</span>
+        </div>
+        <div class="card card-green">
+            <span class="card-label">Último Saldo Cofre</span>
+            <span class="card-value" id="homePrevCofre">R$ 0,00</span>
+        </div>
+        <div class="card card-gray">
+            <span class="card-label">Última Sessão Salva</span>
+            <span class="card-value card-value--sm" id="homeUltimaData">—</span>
+        </div>
+    </section>
+
+    <section class="cheques-section">
+        <h2>Cheques para Depositar Hoje / Em Atraso</h2>
+        <div id="chequesAlerta"></div>
+    </section>
+
+</body>
+</html>

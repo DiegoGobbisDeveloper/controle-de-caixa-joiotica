@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Caixa — Acesso</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/comum.js" defer></script>
+    <script src="assets/js/login.js" defer></script>
+</head>
+<body>
+
+    <main class="login-card">
+
+        <div class="login-brand">
+            <span class="brand-icon">💰</span>
+            <span class="brand-name">Controle de Caixa</span>
+        </div>
+
+        <div class="tabs">
+            <button type="button" class="tab active" data-aba="login">Entrar</button>
+            <button type="button" class="tab" data-aba="registro">Criar Conta</button>
+        </div>
+
+        <form id="form-login">
+            <p id="msg-login" class="msg"></p>
+            <div class="form-group">
+                <label for="login-usuario">Usuário</label>
+                <input type="text" id="login-usuario" placeholder="Digite seu usuário" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label for="login-senha">Senha</label>
+                <input type="password" id="login-senha" placeholder="Digite sua senha" autocomplete="current-password">
+            </div>
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+
+        <form id="form-registro" hidden>
+            <p id="msg-registro" class="msg"></p>
+            <div class="form-group">
+                <label for="reg-usuario">Usuário</label>
+                <input type="text" id="reg-usuario" placeholder="Escolha um usuário" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label for="reg-senha">Senha</label>
+                <input type="password" id="reg-senha" placeholder="Crie uma senha" autocomplete="new-password">
+            </div>
+            <div class="form-group">
+                <label for="reg-confirma">Confirmar Senha</label>
+                <input type="password" id="reg-confirma" placeholder="Repita a senha" autocomplete="new-password">
+            </div>
+            <button type="submit" class="btn-primary">Criar Conta</button>
+        </form>
+
+    </main>
+
+</body>
+</html>

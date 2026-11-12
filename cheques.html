@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheques Pré-Datados</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cheques.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js" defer></script>
+    <script src="assets/js/comum.js" defer></script>
+    <script src="assets/js/cheques.js" defer></script>
+</head>
+<body>
+
+    <div class="cabecalho">
+        <h1>Planilha de Cheques Pré-Datados</h1>
+        <button type="button" id="btnSalvarPdf" class="btn-pdf">Salvar como PDF</button>
+    </div>
+
+    <form id="chequeForm">
+        <table class="form-table">
+            <thead>
+                <tr>
+                    <th><label for="emitente">Emitente</label></th>
+                    <th><label for="numeroCheque">Nº do Cheque</label></th>
+                    <th><label for="agencia">Agência</label></th>
+                    <th><label for="dataEntrega">Data da Entrega</label></th>
+                    <th><label for="dataDesconto">Data de Desconto</label></th>
+                    <th><label for="valor">Valor</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text"   id="emitente"     placeholder="Nome do Emitente" required></td>
+                    <td><input type="text"   id="numeroCheque" placeholder="Número do Cheque" required></td>
+                    <td><input type="text"   id="agencia"      placeholder="Agência"          required></td>
+                    <td><input type="date"   id="dataEntrega"                                 required></td>
+                    <td><input type="date"   id="dataDesconto"                                required></td>
+                    <td><input type="number" id="valor" placeholder="Valor" step="0.01" min="0.01" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-acoes">
+            <button type="submit" id="btnCadastrar" class="btn-cadastrar">Cadastrar Cheque</button>
+            <button type="button" id="btnCancelarEdicao" class="btn-cancelar" hidden>Cancelar</button>
+        </div>
+    </form>
+
+    <h2>Cheques Cadastrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Depositado</th>
+                <th>Emitente</th>
+                <th>Nº do Cheque</th>
+                <th>Agência</th>
+                <th>Data da Entrega</th>
+                <th>Data de Desconto</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="chequeListBody"></tbody>
+    </table>
+
+    <p class="total-pendente">
+        Total Pendente: <span id="total">R$ 0,00</span>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechamento de Caixa</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/fechamento.css">
+    <script src="assets/js/comum.js" defer></script>
+    <script src="assets/js/fechamento.js" defer></script>
+</head>
+<body>
+
+    <div class="header-main">
+        <h1>Fechamento de Caixa</h1>
+        <input type="date" id="dataAtual" class="no-print" aria-label="Data do fechamento">
+    </div>
+
+    <section class="balance-bar">
+        <div class="balance-item">Anterior Fora: <strong id="prevFora">R$ 0,00</strong></div>
+        <div class="balance-item">Anterior Cofre: <strong id="prevCofre">R$ 0,00</strong></div>
+        <button type="button" id="btnHistorico" class="link-historico no-print">📋 Ver histórico</button>
+    </section>
+
+    <section id="historicoPanel" class="historico-container" hidden>
+        <h4>Histórico de Sessões Salvas</h4>
+        <div id="historicoLista"></div>
+    </section>
+
+    <main class="dashboard-grid">
+
+        <section class="caixa-section">
+            <h3>Caixa de Fora (Saídas)</h3>
+            <form id="formFora" class="form-group no-print">
+                <input type="text"   id="referenciaFora" placeholder="Descrição">
+                <input type="number" id="valorFora"      placeholder="R$" step="0.01" min="0.01">
+                <button type="submit" class="btn-add">Registrar</button>
+            </form>
+            <ul id="listaReferenciasFora" class="lista-lancamentos"></ul>
+            <div class="result-box">
+                Total Saídas: <strong id="totalRetiradoFora">R$ 0,00</strong>
+            </div>
+        </section>
+
+        <section class="caixa-section">
+            <h3>Caixa Interno (Cofre)</h3>
+            <form id="formCofre" class="form-group no-print">
+                <input type="text"   id="referenciaCofre" placeholder="Descrição">
+                <input type="number" id="valorCofre"      placeholder="R$" step="0.01" min="0.01">
+                <select id="tipoOperacao" aria-label="Tipo de lançamento">
+                    <option value="adicionar">Entrada (+)</option>
+                    <option value="subtrair">Saída (-)</option>
+                </select>
+                <button type="submit" class="btn-add">Lançar</button>
+            </form>
+            <ul id="listaReferenciasCofre" class="lista-lancamentos"></ul>
+            <div id="caixaSaldoCofre" class="result-box">
+                Saldo Final: <strong id="saldoCofre">R$ 0,00</strong>
+            </div>
+        </section>
+
+        <section class="actions-section no-print">
+            <h3>Ações</h3>
+            <button type="button" id="btnSalvar"   class="save-button">💾 Salvar Saldos</button>
+            <button type="button" id="btnImprimir" class="print-button">🖨️ Imprimir</button>
+            <button type="button" id="btnLimpar"   class="clear-button">🗑️ Limpar Lançamentos e Histórico</button>
+        </section>
+
+    </main>
+
+</body>
+</html>

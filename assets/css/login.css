@@ -1,0 +1,139 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-primaria-clara) 60%, #1a252f 100%);
+}
+
+/* ---------- Card central ---------- */
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 36px 32px 32px;
+    background: var(--cor-superficie);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    font-size: 32px;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    letter-spacing: 0.3px;
+}
+
+/* ---------- Abas ---------- */
+
+.tabs {
+    display: flex;
+    margin-bottom: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    overflow: hidden;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background: #f5f6f8;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab.active {
+    background: var(--cor-primaria);
+    color: #fff;
+}
+
+.tab:hover:not(.active) {
+    background: #e8eaed;
+    color: var(--cor-texto);
+}
+
+/* ---------- Formulário ---------- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    color: var(--cor-texto);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-info);
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    background: var(--cor-sucesso);
+    color: #fff;
+    border: none;
+    border-radius: var(--raio);
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--cor-sucesso-escura);
+}
+
+/* ---------- Mensagens de erro e sucesso ---------- */
+
+.msg {
+    display: none;
+    margin-bottom: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.msg.erro {
+    display: block;
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.msg.sucesso {
+    display: block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}

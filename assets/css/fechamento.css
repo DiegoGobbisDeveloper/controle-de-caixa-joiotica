@@ -1,0 +1,268 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main input {
+    width: auto;
+    margin: 0;
+}
+
+/* ---------- Saldos anteriores ---------- */
+
+.balance-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 20px;
+    background: #fff9c4;
+    border: 1px solid #fbc02d;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.balance-item {
+    display: flex;
+    gap: 6px;
+}
+
+.link-historico {
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: var(--cor-info);
+    text-decoration: underline;
+}
+
+/* ---------- Histórico ---------- */
+
+.historico-container {
+    padding: 16px;
+    background: var(--cor-superficie);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.historico-container h4 {
+    margin-bottom: 12px;
+}
+
+.historico-vazio {
+    font-size: 13px;
+    color: #888;
+}
+
+.hist-entry {
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background: #fafafa;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+}
+
+.hist-entry summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.hist-entry summary::-webkit-details-marker {
+    display: none;
+}
+
+.hist-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.hist-salvo-em {
+    font-size: 12px;
+    color: #888;
+}
+
+.hist-entry-vals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.hist-detail-toggle {
+    font-size: 12px;
+    color: var(--cor-info);
+    text-decoration: underline;
+}
+
+.hist-detalhe {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+.hist-detalhe ul {
+    margin: 6px 0;
+    padding-left: 20px;
+}
+
+/* ---------- Colunas dos caixas ---------- */
+
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.caixa-section {
+    flex: 2;
+    min-width: 280px;
+    padding: 20px;
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra-leve);
+}
+
+.caixa-section h3 {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: var(--cor-superficie);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--cor-texto);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-info);
+}
+
+/* ---------- Botões ---------- */
+
+.btn-add,
+.actions-section button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: opacity 0.2s;
+}
+
+.btn-add:hover,
+.actions-section button:hover {
+    opacity: 0.88;
+}
+
+.btn-add      { width: 100%; background: #34495e; }
+.save-button  { background: var(--cor-sucesso); }
+.print-button { background: var(--cor-info); }
+.clear-button { background: var(--cor-perigo); }
+
+/* ---------- Lista de lançamentos ---------- */
+
+.lista-lancamentos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 220px;
+    margin-top: 14px;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.lista-lancamentos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.valor-entrada { color: var(--cor-sucesso); }
+.valor-saida   { color: var(--cor-perigo-escura); }
+
+.btn-remove-item {
+    flex-shrink: 0;
+    padding: 0 4px;
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--cor-perigo-escura);
+}
+
+.btn-remove-item:hover {
+    color: var(--cor-perigo);
+}
+
+/* ---------- Totais ---------- */
+
+.result-box {
+    margin-top: 16px;
+    padding: 14px;
+    background: #eee;
+    border-radius: var(--raio);
+    text-align: center;
+    font-size: 17px;
+}
+
+.result-box.saldo-positivo { background: #2b813f; color: #fff; }
+.result-box.saldo-negativo { background: #ffcdd2; color: #c62828; }
+
+/* ---------- Ações ---------- */
+
+.actions-section {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+}
+
+.actions-section h3 {
+    margin-bottom: 4px;
+    font-size: 15px;
+}
