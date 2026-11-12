@@ -2,7 +2,7 @@
 
 ## O problema
 
-Ser desenvolvedor é resolver problemas reais. Em um projeto anterior, desenvolvi um mini sistema web de fechamento de caixa para a empresa onde trabalho, substituindo um processo antigo que apresentava muitos erros e inconsistências. Aquela solução facilitou o controle do caixa interno e das saídas externas, com autenticação por usuário, histórico de sessões e geração de relatórios para impressão.
+Ser desenvolvedor é resolver problemas reais. Desenvolvi um mini sistema web de fechamento de caixa para a empresa onde trabalho, substituindo um processo antigo que apresentava muitos erros e inconsistências. Aquela solução facilitou o controle do caixa interno e das saídas externas, com autenticação por usuário, histórico de sessões e geração de relatórios para impressão.
 
 Com o uso, surgiu uma nova necessidade: o controle de cheques pré-datados ainda era feito em uma planilha mal organizada, causando erros nos valores e perda de datas de depósito. Fui solicitado a resolver esse problema também. Em vez de criar algo separado, evoluí o sistema anterior, integrando o controle de cheques ao fechamento de caixa em uma solução única, mais completa e mais organizada para o fluxo de trabalho da empresa.
 
